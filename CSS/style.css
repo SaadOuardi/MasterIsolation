@@ -1,0 +1,1176 @@
+
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Protest+Riot&display=swap');
+
+/* VARRIABLES */
+:root{
+
+    /* ---------- LIGHT MODE ---------- */
+
+    /* BG COLOR */
+    --header-bgColor-lm: #0086ff;
+    --body-bgColor-lm: linear-gradient(0deg, rgba(0,51,255,1) 20%, rgba(228,255,0,1) 100%);    ;
+    --main-bgColor-lm: linear-gradient(0deg, rgba(0,51,255,1) 20%, rgba(228,255,0,1) 100%);
+    ;
+    --section-bgColor-lm: black;
+    --footer-bgColor-lm: #0086ff;
+
+    /* COLOR */
+    --color-text-lm: white;
+
+    /* ---------- DARK MODE ----------*/
+
+    /* BG COLOR */
+    --header-bgColor-dm: rgb(30, 30, 30);
+    --body-bgColor-dm: linear-gradient(0deg, rgba(0,51,255,1) 20%, rgba(228,255,0,1) 100%);    ;
+    --main-bgColor-dm: linear-gradient(0deg, rgba(0,51,255,1) 20%, rgba(228,255,0,1) 100%);    ;
+    --section-bgColor-dm: black;
+    --footer-bgColor-dm: rgb(30, 30, 30);
+
+    /* COLOR */
+    --color-text-dm: white;
+
+    /* FONT */
+    --font-primary: 'Anta', serif;
+    --font-secondary: "Protest Riot", sans-serif;
+}
+
+/* INITIALISATION */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+}
+
+header{
+    background-color: var(--header-bgColor-lm);
+    color: var(--color-text-lm);
+    height: fit-content;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+main{
+    background: linear-gradient(0deg, rgba(0,51,255,1) 20%, rgba(228,255,0,1) 100%);
+    background-repeat: no-repeat;
+}
+
+section{
+    background-color: var( --body-bgColor-dm);
+    height: fit-content;
+    width: 100%;
+    padding: 50px 0;
+}
+
+footer{
+    background-color: rgb(72, 155, 255);
+    height: fit-content;
+    width: 100%;
+    padding: 20px 0 0 0;
+}
+
+button{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    height: 40px;
+    padding: 15px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    transition: background-color 0.2s ease-out;
+}
+
+button:hover{
+    background-color: #65b7ff;
+    cursor: pointer;
+}
+
+input{
+    height: 30px;
+    width: 300px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 7px;
+}
+
+a{
+    text-decoration: none;
+    width: fit-content;
+    color: rgb(0, 140, 255);
+    transition: all 0.2s linear;
+}
+a:hover{
+    color: rgb(98, 185, 255);
+}
+.bi{
+    cursor: pointer;
+}
+hr{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    border: none;
+}
+/* ------------- HEADER ------------- */
+
+.header__div{
+    background-color: #d9d9d9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.header__auth_contact{
+    padding: 0;
+}
+.contact-info__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.contact-info__div a{
+    color: white;
+    font-size: 12px;
+}
+.contact__div{
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 10px;
+}
+.contact-info__div .email__div{
+    background-color: #0058a6;
+}
+.contact-info__div .email__div:hover{
+    background-color: #0173d6;
+}
+.call__div{
+    background-color: #00284c;
+}
+.call__div:hover{
+    background-color: #004581;
+}
+.container__box{
+    padding: 0 10px;
+    width: 100%;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+/* WEBSITE LANGUAGE */
+.language__input{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0 30px;
+    border-radius: 4px;
+    border: solid 2px white;
+    transition: all 0.4s linear;
+}
+.language__input:hover{
+    background-color: #65b7ff;
+}
+
+.language__input option{
+    background-color: black;
+    color: white;
+}
+
+.auth__div{
+    display: block;
+}
+.auth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* ----------------- MAIN HEADER ------------------ */
+.main__header{
+
+    background: var(--body-bgColor-lm);
+    gap: 0 520px;
+    /* position: sticky;
+    top: 0;
+    z-index: 1000; */
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* --------- COMPANY --------- */
+.company__div{
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+}
+
+.company-name__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-name{
+    color: white;
+}
+
+/* --------- SEARCH BAR --------- */
+.searchbar__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GLOBAL CSS STYLE */
+.category__input , .search__input , .search__button, .language__input{
+    height: 40px;
+    border: none;
+    outline: none;
+}
+select:hover{
+    cursor: pointer;
+}
+
+/* --------- CATEGORY INPUT --------- */
+.category__input{
+    background-color: black;
+    color: white;
+    border-radius: 5px 0 0 5px;
+}
+
+/* --------- SEARCH INPUT ---------  */
+.search__input{
+    padding-left: 5px;
+}
+
+/* --------- SEARCH BUTTON --------- */
+.search__button{
+    background-color: gold;
+    color: black;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+}
+.search__button:hover{
+    background-color: black;
+    color: white;
+}
+.search__button:active{
+    background-color: rgb(255, 100, 11);
+    color: black;
+}
+.container__3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ---------ICONS--------- */
+.icons__div{
+    display: flex;
+    gap:15px;
+    cursor: pointer;
+}
+.icon__div{
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.2s linear;
+}
+.icon__div:hover{
+    color: orange;
+    transform: translateY(-0.3rem);
+}
+
+.icon__div .bi{
+    background-color: transparent;
+    height: 35px;
+    width: 35px;
+}
+
+/* --------- NOTIFICATION --------- */
+.notification__div{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+.notification__number{
+    font-size: 10px;
+    color: white;
+}
+button.notification__button{
+    background-color:red;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 5px;
+}
+
+/* --------- HORIZANTAL NAV BAR --------- */
+.header__horizantal-navbar__div{
+    background-color: black;
+    height: 50px;
+    padding: 0;
+}
+
+/* LISTS */
+.header__horizantal-navbar__div li{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.header__horizantal-navbar__div li:hover{
+    background-color: rgb(198, 198, 198);
+}
+
+/* ACTIVE MODE */
+.header__horizantal-navbar__div li.active{
+    background-color: rgb(198, 198, 198);
+}
+
+/* --------- VERTICAL NAV BAR --------- */
+.more__icon_div{
+    display: none;
+    position: relative;
+}
+.more__icon{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-out;
+}
+.more__icon:hover{
+    background-color: gold;
+    color: black;
+    /* transform: translateY(-0.5rem); */
+    cursor: pointer;
+}
+
+/* DROPDOWN */
+.menu__dropdown{
+    display: none;
+    position: absolute;
+    z-index:1000;
+    
+}
+.menu__dropdown__content{
+    background-color: black;
+    width: 300px;
+    height: fit-content;
+    border-radius: 9px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.menu__dropdown li{
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu__dropdown li:hover{
+    background-color: rgb(146, 146, 146);
+    cursor: pointer;
+}
+.menu__dropdown li a{
+    color: white;
+}
+.more__icon_div:hover .menu__dropdown{
+    display: block;
+}
+
+/* SLIDER */
+.header__slider{
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment:fixed;
+    object-fit: cover;
+    width:100%;
+    height: 600px;
+    display: grid;
+}
+
+.content__slider{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10px;
+}
+
+.main_content__slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+/* SLIDER BUTTONS */
+.left_button , 
+.right_button{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+.left_button:hover,
+.right_button:hover{
+    transform: translateY(-0.5rem);
+}
+
+/* CIRCLES BUTTONS */
+.circles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circle{
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+div.active{
+    background-color: white;
+    transform: scale(0.7);
+    height: 20px;
+    width: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+
+/* SECTION CSS STYLES  */
+.section__description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ARTICALS */
+.articals{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.artical{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(255, 153, 0);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 15px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.artical:hover{
+    transform: translateY(-0.5rem);
+    transform: scale(0.98);
+}
+
+
+.artical-1{
+    background-image: url(../IMG/machine.jpg);
+}
+.artical-2{
+    background-image: url(../IMG/door.jpg);
+}
+.artical-3{
+    background-image: url(../IMG/store.jpg);
+}
+
+.section__title_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    height: fit-content;
+    width: 100%;
+    padding: 20px 0;
+}
+/* ABOUT US */
+.section__image{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section__image img{
+    width: 1200px;
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+/* OUR SERVICES */
+.services__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.service{
+    height: 250px;
+    width: 200px;
+    background-color: grey;
+    box-shadow: 2px 2px 6px rgba(255, 219, 219, 0.571);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 5px;
+    gap: 10px;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.service:hover{
+    transform: scale(0.8);
+    transform: translateY(-0.8rem);
+}
+
+.service img{
+    width: 90%;
+    height: 70%;
+}
+
+.service button{
+    width: 90%;
+    height: 20%;
+}
+
+/* OUR CLIENTS */
+
+.clients__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.clients__list img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+/* MEET OUR TEAM */
+
+.team__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team__member{
+    background-color: grey;
+    width: 280px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px 50px;
+    gap: 15px;
+    border-radius: 9px;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.team__member:hover{
+    transform: translateY(-0.5rem);
+}
+.team__member img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.team__member a svg{
+    color: white;
+    height: 30px;
+    width: 30px;
+    transition: all 0.3s linear;
+}
+
+.team__member a:hover svg{
+    color: #57abf5;
+}
+
+
+/* ------------- FOOTER ------------- */
+
+
+/* FOOTER ROW 1 */
+
+.footer__row-1{
+    background-color: #00284c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.footer__social_media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+.footer__social_media .icon__bg{
+    background-color: blue;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s linear;
+    cursor: pointer;
+}
+.footer__social_media .icon__bg:hover{
+    transform: translateY(-0.5rem);
+}
+.footer__social_media .bi{
+    color: white;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.4s linear;
+}
+
+.footer__social_media .bi:hover{
+    transform: scale(0.98);
+    width: 30px;
+    height: 30px;
+}
+.company_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.company_div img{
+    border-radius: 9px;
+    width: 60px;
+    height: 60px;
+}
+.company_div h1{
+    font-size: 25px;
+}
+
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* FOOTER MENU */
+.menus{
+    background-color: #00284c;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 10px 40px;
+    padding: 25px;
+}
+.menu{
+    display: flex;
+    align-items: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 0 10px;
+    height: 200px;
+    width: 200px;
+}
+
+.menu h2{
+    color: gold;
+}
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 8px;
+}
+.menu ul li{
+    list-style: none;
+}
+.menu li:hover{
+    transform: scale(0.95);
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu ul li a:hover{
+    color: gold;
+}
+
+.newsletter__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.newsletter__div input{
+    height: 50px;
+    width: 300px;
+    background-color: rgb(233, 233, 233);
+    color: black;
+    border: none;
+    border-radius: 4px;
+}
+.newsletter__div button{
+    height: 50px;
+    width: 300px;
+    background-color: rgb(246, 201, 0);
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.newsletter__div input::placeholder{
+    color: grey;
+    padding-left: 5px;
+
+}
+.newsletter__div input:focus,
+.newsletter__div input:active{
+    outline: none;
+}
+
+
+/* REACH US DIV */
+.reach_us__div{
+    background-color: rgb(55, 55, 55);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 380px;
+}
+
+.reach_us__div .bi{
+    width: 30px;
+    height: 30px;
+}
+
+.contact:hover{
+    color: gold;
+    cursor: pointer;
+}
+/* COPYRIGHT DIV */
+.copyright_div{
+    height: fit-content;
+    width: 100%;
+    padding: 20px 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ------------- HOME PAGE ------------- */
+
+/* ------------- STORE PAGE ------------- */
+.main-section{
+    background-image: url();
+    background-color: rgb(255, 128, 128);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.store__list{
+    background-color: cadetblue;
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item{
+    width: 200px;
+    height: fit-content;
+    background-color: #003f77;
+    box-shadow: 2px 2px 5px #00284c;
+    border-radius: 9px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.item:hover{
+    background-color: #00559f;
+    border-radius: 16px;
+    cursor: pointer;
+    transform: scale(0.98);
+}
+.item img{
+    width: 95%;
+    height: 70%;
+}
+.item h4{
+    color: white;
+}
+/* ------ SHOP - STORE ------*/
+
+/* ------ SHOP - ITEM ------ */
+
+/* ------------- ABOUT US PAGE ------------- */
+
+/* ------------- OUR TEAM PAGE ------------- */
+
+/* ------------- CONTACT PAGE ------------- */
+
+.body__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    padding: 50px 0;
+    background-color: #00284c;
+}
+.form{
+    background-color: rgb(208, 208, 208);
+    height: fit-content;
+    width: 500px;
+    padding: 30px 30px 50px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.LogIn__links_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.close_button__div{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 50px;
+    width: 100%;
+}
+.form__title{
+    padding-bottom: 20px;
+}
+.close_button{
+    color: red;
+    width: 30px;
+    height: 30px;
+}
+.close_button:hover{
+    color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.form_inputs{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+sup{
+    font-size:15px;
+    color: red;
+    font-weight: bold;
+}
+
+.input__div{
+    width: 100%;
+    position: relative;
+
+}
+.input__icon{
+    position: absolute;
+    top: 55%;
+    left: 96%;
+}
+.input__div input{
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding-left: 5px;
+    border: 2px solid rgb(90, 89, 89);
+    border-radius: 4px;
+    outline: none;
+}
+.input__div input:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+.input__div input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.input__div input[type="submit"]{
+    height: 50px;
+    width: calc(100% + 7.5px);
+    border: 2px solid black ;
+    background-color: black;
+    color: white;
+    transition: all 0.4s linear;
+}
+
+.input__div input[type="submit"]:hover{
+    border: 2px solid #65b7ff;
+    background-color: #65b7ff;
+    color: black;
+    cursor: pointer;
+}
+.form_inputs label {
+    color: rgb(36, 36, 36);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.checkbox__div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+
+.social__container{
+    padding: 30px 0;
+}
+
+.continue__with::after,
+.continue__with::before{
+    content: " ------------------ ";
+}
+
+.social__media__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 0 30px 0;
+}
+
+.social__media_bg{
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s linear;
+}
+.social__media_bg:hover{
+    background-color: rgb(212, 212, 212);
+    cursor: pointer;
+    transform: translateY(-0.3rem);
+} 
+.social__media_bg .bi{
+    color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.facebook__bg{
+    background-color: rgb(0, 128, 255);
+}
+.facebook__bg:hover{
+    background-color: rgb(68, 161, 255);
+}
+.google__bg{
+    background-color:  #01a522;
+}
+.google__bg:hover{
+    background-color:  #00d12a;
+}
+.apple__bg{
+    background-color: black;
+}
+.apple__bg:hover{
+    background-color: rgb(56, 56, 56);
+}
+
+
+
+
+/* LIGHTBOX */
+.lightbox__overlay{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.lightbox{
+    width: 500px;
+    height: fit-content;
+    background-color: rgb(176, 176, 176);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+
+}
+
+.lightbox__closeBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.lightbox__side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lightbox__inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.lightbox .closeBtn{
+    color: red;
+    height: 30px;
+    width: 30px;
+}
+
+.lightbox__inputs input{
+    height: 50px;
+    background-color: #00284c;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    /* padding-left: 10px; */
+}
+/* .lightbox__inputs input[type='checkbox']{
+    width: calc();
+} */
+.lightbox__inputs input:hover{
+    background-color: #003f77;
+}
